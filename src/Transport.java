@@ -1,17 +1,31 @@
-public class Transport {
-    protected String modelName;
-    protected int wheelsCount;
+public abstract class Transport implements TransportForService {
+    private String modelName;
+    private int wheelsCount;
+
+    public Transport(int wheelsCount, String modelName) {
+        this.wheelsCount = wheelsCount;
+        this.modelName = modelName;
+    }
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public int getWheelsCount() {
+        return wheelsCount;
+    }
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
 
-    public static void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-
-    public static void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+    @Override
+    public void check() {
+        if (this.modelName != null && this.wheelsCount != 0) ;
+        System.out.println("Обслуживаем " + this.getModelName());
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            this.updateTyre();
+        }
     }
 }
 
