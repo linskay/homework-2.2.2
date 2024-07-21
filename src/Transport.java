@@ -21,7 +21,6 @@ public abstract class Transport implements TransportForService {
 
     @Override
     public void check() {
-        if (this.modelName != null && this.wheelsCount != 0) ;
         System.out.println("Обслуживаем " + this.getModelName());
         for (int i = 0; i < this.getWheelsCount(); i++) {
             this.updateTyre();

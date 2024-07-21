@@ -3,7 +3,7 @@ public class Car extends Transport {
         super(wheelsCount, modelName);
     }
 
-    public static void checkEngine() {
+    public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
 

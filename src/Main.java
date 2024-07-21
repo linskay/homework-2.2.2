@@ -3,7 +3,7 @@ public class Main {
         Transport car = new Car(4, "car1");
         Transport car2 = new Car(4, "car2");
 
-        Transport truck = new Truck(6, "truk1");
+        Transport truck = new Truck(6, "truck1");
         Transport truck2 = new Truck(8, "truck2");
 
         Transport bicycle = new Bicycle(2, "bicycle1");

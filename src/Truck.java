@@ -9,8 +9,8 @@ public class Truck extends Transport {
         checkTrailer();
     }
 
-    public static void checkTrailer() {
-        Car.checkEngine();
+    public void checkTrailer() {
+        System.out.println("Проверяем двигатель");
         System.out.println("Проверяем прицеп");
     }
 }
